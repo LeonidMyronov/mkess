@@ -1,0 +1,15 @@
+<div class="wrapper page-license">
+  <section class="license-group">
+    <div *ngFor="let license of licenses" class="license-item">
+      <div class="license-item__title license-content">
+        {{ license.name }}
+      </div>
+      <div class="license-item__image-wrapper">
+        <img [src]="license.url" alt="{{ license.name }}">
+      </div>
+      <div class="license-item__description license-content">
+        {{ license.description }}
+      </div>
+    </div>
+  </section>
+</div>

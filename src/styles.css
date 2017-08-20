@@ -1,1 +1,335 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    /*background-color: red;*/
+}
+
+.wrapper {
+    margin: 0 0;
+    display: block;
+}
+
+.dark-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40,122,122, .95);
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    transition: all .5s;
+    justify-content: center;
+}
+
+.dark-wrapper .dark-content {
+    color: #fff;
+    font-size: 22px;
+    line-height: 36px;
+    align-self: center;
+    width: 60%;
+    text-align: center;
+
+}
+
+
+ul, h1, h2 {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.header, .footer {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #83D6DE;
+    opacity: .9;
+    line-height: 80px;
+    font-size: 20px;
+    z-index: 3;
+    display: block;
+    top: 0;
+}
+
+.footer {
+    position: relative;
+    opacity: 1;
+}
+.header .wrapper, .footer .wrapper {
+    padding: 0 140px;
+}
+
+.logo {
+    float: left;
+    width: 113px;
+    height: 80px;
+    /*background-color: #fff;*/
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.logo img {
+    width: auto;
+    height: 100%;
+    vertical-align: top;
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.nav-group {
+    float: right;
+}
+
+.nav-element {
+    display: inline-block;
+    transition: all .8s;
+}
+
+.nav-element.active {
+    background-color: #3a9898;
+    border-radius: 5px;
+
+}
+
+.nav-element a, .nav-element a:active, .nav-element a:focus {
+    color: #fff;
+    padding: 30px 20px;
+    transition: all .8s;
+    text-decoration: none;
+}
+
+.nav-element:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-element:hover a {
+    color: #83D6DE;
+    text-decoration: none;
+}
+
+.intro {
+    width: 100%;
+    height: 500px;
+    background: url(assets/images/header_banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .35);
+    position: relative;
+}
+
+.content-wrapper .content {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    content: '';
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+
+}
+
+.content__header {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px #83D6DE;
+
+}
+
+.content__description {
+    font-size: 24px;
+}
+
+.intro .nav-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 60px;
+}
+
+.intro .nav-group {
+    margin:0 200px;
+    float: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro .nav-element {
+    
+}
+
+
+.intro .nav-element a{
+    padding: 50px 120px;
+    background-color: #83D6DE;
+    opacity: .8;
+}
+
+.footer-content {
+}
+
+.footer-content li {
+    display: inline-block;
+    color: #fff;
+    margin-right: 30px;
+    font-size: 15px;
+}
+
+section.services {
+    margin: 40px 0;
+}
+
+section.services .content-wrapper {
+    background-color: rgba(12,43,43,.6);
+    top: 70%;
+    height: 30%;
+}
+
+section.services .content {
+    top: 50%;
+}
+
+.list-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services .list-element {
+    width: 50%;
+    height: 400px;
+    cursor: pointer;
+    position: relative;
+}
+
+.services .list-element:hover .dark-wrapper {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
+
+.services .content__header {
+    font-size: 35px;
+    margin-bottom: 0;
+    text-shadow: none;
+}
+
+.services .dark-wrapper {
+
+}
+
+.list-element.service_proj {
+    background: url(/assets/images/services/services_proj.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.list-element.service_smu {
+    background: url(/assets/images/services/services_smu.jpg) no-repeat center;
+    background-size: cover;
+}
+.list-element.service_pnr {
+    background: url(/assets/images/services/services_pnr.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.list-element.service_consult {
+    background: url(/assets/images/services/services_consult.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.bottom-banner {
+    background: url(assets/images/footer_banner.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.page-license, .page-contacts {
+    margin-top: 80px;
+}
+
+.page-license {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.license-group {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.license-item {
+    margin: 10px;
+    border: 1px solid #3a9898;
+    padding: 5px;
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    background-color: azure;
+}
+
+.license-content {
+    background-color: #3a9898;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.license-item__title {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.license-item__image-wrapper {
+    width: 100%;
+}
+
+.license-item__image-wrapper img {
+    width: auto;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.page-contacts {
+    padding: 40px 0px;
+}
+
+.page-contacts h4 {
+    border: 1px solid #3a9898;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #3a9898;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.page-contacts address p{
+    line-height: 25px;
+    margin-bottom: 0;
+
+}
+span.address-content {
+    margin-left: 10px;
+}
+span.glyphicon {
+    color: #3a9898;
+    font-size: 20px;
+    vertical-align: sub;
+}
