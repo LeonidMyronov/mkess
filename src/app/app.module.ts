@@ -12,8 +12,10 @@ import { ConsultComponent } from './services/consult/consult.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LicenseComponent } from './license/license.component';
 import { HomeComponent } from './home/home.component';
-import {AppRoutingComponent} from "./app-routing.module";
-import {DbService} from "./core/db.service";
+import { AppRoutingComponent } from "./app-routing.module";
+import { DbService } from "./core/db.service";
+import { Tab1Component } from './home/tab1/tab1.component';
+import { ServicesListComponent } from './home/services-list/services-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {DbService} from "./core/db.service";
     ConsultComponent,
     ContactsComponent,
     LicenseComponent,
-    HomeComponent
+    HomeComponent,
+    Tab1Component,
+    ServicesListComponent
   ],
   imports: [
     BrowserModule,

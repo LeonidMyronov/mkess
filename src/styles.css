@@ -187,7 +187,7 @@ ul, h1, h2 {
 }
 
 section.services {
-    margin: 40px 0;
+    margin: 40px 140px;
 }
 
 section.services .content-wrapper {
@@ -206,10 +206,11 @@ section.services .content {
 }
 
 .services .list-element {
-    width: 50%;
+    width: 48%;
     height: 400px;
     cursor: pointer;
     position: relative;
+    margin: 1%;
 }
 
 .services .list-element:hover .dark-wrapper {
