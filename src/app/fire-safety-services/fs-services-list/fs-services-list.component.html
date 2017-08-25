@@ -1,0 +1,18 @@
+<div class="fs-list-group">
+
+  <div class="fs-list-element" (click)="onNavigate(service)" *ngFor="let service of servicesList" [ngClass]="service.url">
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="content__header">
+          {{ service.name }}
+        </div>
+      </div>
+    </div>
+    <div class="dark-wrapper">
+      <div class="dark-content">
+        {{ service. description }}
+      </div>
+    </div>
+  </div>
+
+</div>

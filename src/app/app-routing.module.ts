@@ -14,6 +14,11 @@ import {ProjectComponent} from "./energy-services/project/project.component";
 import {ConsultComponent} from "./energy-services/consult/consult.component";
 import {PnrComponent} from "./energy-services/pnr/pnr.component";
 import {SmuComponent} from "./energy-services/smu/smu.component";
+import {FsRightsComponent} from "./fire-safety-services/fs-rights/fs-rights.component";
+import {FsCalculationComponent} from "./fire-safety-services/fs-calculation/fs-calculation.component";
+import {FsArgumentsComponent} from "./fire-safety-services/fs-arguments/fs-arguments.component";
+import {FsDocumentationComponent} from "./fire-safety-services/fs-documentation/fs-documentation.component";
+import {FsServicesListComponent} from "./fire-safety-services/fs-services-list/fs-services-list.component";
 
 const appRoutes: Routes = [
     // { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +27,7 @@ const appRoutes: Routes = [
       {path: 'about-us', component: AboutUsComponent},
       {path: 'who-we-are', component: WhoWeAreComponent},
       {path: 'how-we-work', component: HowWeWorkComponent},
-    ] },
+    ]},
     { path: 'energetics', component: EnergyServicesComponent , children: [
       {path: '', component: EnergyServicesListComponent},
       {path: 'project', component: ProjectComponent},
@@ -30,7 +35,13 @@ const appRoutes: Routes = [
       {path: 'pnr', component: PnrComponent},
       {path: 'consult', component: ConsultComponent},
     ]},
-    { path: 'fire-safety', component: FireSafetyServicesComponent },
+    { path: 'fire-safety', component: FireSafetyServicesComponent, children: [
+      {path: '', component: FsServicesListComponent},
+      {path: 'fire-safety-rights-defense', component: FsRightsComponent},
+      {path: 'fire-safety-arguments', component: FsArgumentsComponent},
+      {path: 'fire-safety-calculation', component: FsCalculationComponent},
+      {path: 'fire-safety-documentation-developing', component: FsDocumentationComponent},
+    ]},
     { path: 'license', component: LicenseComponent},
     { path: 'contacts', component: ContactsComponent},
     { path: '**', redirectTo: 'home'}

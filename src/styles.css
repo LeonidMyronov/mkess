@@ -135,6 +135,7 @@ ul, h1, h2 {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
+    width: 90%;
 
 }
 
@@ -224,7 +225,7 @@ section.services, section.page {
     text-align: center;
 }
 
-.services.services-list .energy-service{
+.services.services-list .energy-service, .fire-safety-service{
     text-align: left;
 }
 
@@ -235,6 +236,7 @@ section.services, section.page {
     color: #40c1c1;
     display: inline-block;
     position: relative;
+    text-shadow: 1px 1px 0 #000;
 }
 
 .services h2:before, .services h2:after {
@@ -259,9 +261,22 @@ section.services, section.page {
     border-right-width: 1px;
 }
 
+.services.fire-safety-list h2 {
+    color: #f00;
+}
+
+.services.fire-safety-list h2:before, .services.fire-safety-list h2:after {
+    border-color: #ff0000;
+}
 
 section.services .content-wrapper {
     background-color: rgba(12,43,43,.6);
+    top: 70%;
+    height: 30%;
+}
+
+section.services .fs-list-group .content-wrapper {
+    background-color: rgba(88,0,0,.6);
     top: 70%;
     height: 30%;
 }
@@ -270,12 +285,12 @@ section.services .content {
     top: 50%;
 }
 
-.list-group {
+.list-group, .fs-list-group {
     display: flex;
     flex-wrap: wrap;
 }
 
-.services .list-element {
+.services .list-element, .fs-list-group .fs-list-element {
     width: 48%;
     height: 400px;
     cursor: pointer;
@@ -283,7 +298,12 @@ section.services .content {
     margin: 1%;
 }
 
-.services .list-element:hover .dark-wrapper {
+.fs-list-group .fs-list-element img {
+    width: 100%;
+    height: auto;
+}
+
+.services .list-element:hover .dark-wrapper, .fs-list-group .fs-list-element:hover .dark-wrapper {
     display: flex;
     justify-content: center;
     opacity: 1;
@@ -295,8 +315,36 @@ section.services .content {
     text-shadow: none;
 }
 
-.services .dark-wrapper {
+.fs-list-element .content {
 
+}
+
+.fs-list-element .content__header {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.fs-list-group .dark-wrapper {
+    background-color: #882b29;
+}
+
+
+.fs-list-element.fire-safety-documentation-developing {
+    background: url(assets/images/fire-safety/fire-safety-documentation-developing_2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.fs-list-element.fire-safety-calculation {
+    background: url(assets/images/fire-safety/fire-safety-calculation.jpg) no-repeat center;
+    background-size: cover;
+}
+.fs-list-element.fire-safety-arguments {
+    background: url(assets/images/fire-safety/fire-safety-arguments.jpg) no-repeat center;
+    background-size: cover;
+}
+.fs-list-element.fire-safety-rights-defense {
+    background: url(assets/images/fire-safety/fire-safety-rights-defense.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .list-element.service_proj {
@@ -563,30 +611,51 @@ span.glyphicon {
     transform: rotate(45deg);
 }
 
-.energy-service {
+.energy-service, .fire-safety-service {
 
 }
 
 
-.energy-service h4 {
+.energy-service h4, .fire-safety-service h4 {
     font-size: 24px;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.energy-service h5 {
+.energy-service h5, .fire-safety-service h5 {
     font-weight: bold;
     font-size: 18px;
 }
 
-.energy-service img{
+.fire-safety-service h5 {
+    margin: 20px 0;
+}
+
+.fire-safety-service ul {
+    margin-bottom: 60px;
+}
+
+.energy-service img, .fire-safety-service img{
     width: 100%;
     height: auto;
 }
 
-.energy-service .sub-list:before {
+.energy-service .sub-list:before, .fire-safety-service .sub-list:before {
     width: 10px;
     height: 10px;
     left: 10px;
     top: 5px;
+}
+
+.fire-safety-service .square-marked-list:before {
+    background-color: #f00;
+}
+
+.fire-safety-service .subtitle {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.docRef {
+    font-style: italic;
 }

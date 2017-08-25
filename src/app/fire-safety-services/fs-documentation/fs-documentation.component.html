@@ -1,0 +1,16 @@
+<div class="row fire-safety-service">
+  <div class="col-md-5 col-sm-hidden">
+    <img [src]="service.imageUrl" alt="{{ service.name }}" class="img-responsive center-block">
+  </div>
+  <div class="col-md-7 col-sm-12">
+    <h4 class="square-marked-list">{{ service.name }}</h4>
+
+    <div *ngIf="service.titledList.length">
+      <ul *ngFor="let docObj of service.titledList; let i = index">
+        <h5>{{ docObj.title }}</h5>
+        <span class="subtitle">{{ docObj.subtitle }}</span>
+        <li class="square-marked-list sub-list" *ngFor="let item of docObj.documentList"><span class="docRef">{{ item.documentReference }}</span> {{ item.documentDescription }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

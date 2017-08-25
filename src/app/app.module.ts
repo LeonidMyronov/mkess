@@ -20,6 +20,11 @@ import { WhoWeAreComponent } from './home/who-we-are/who-we-are.component';
 import { HowWeWorkComponent } from './home/how-we-work/how-we-work.component';
 import { ServicesListComponent } from './home/services-list/services-list.component';
 import { FireSafetyServicesComponent } from './fire-safety-services/fire-safety-services.component';
+import { FsServicesListComponent } from './fire-safety-services/fs-services-list/fs-services-list.component';
+import { FsArgumentsComponent } from './fire-safety-services/fs-arguments/fs-arguments.component';
+import { FsCalculationComponent } from './fire-safety-services/fs-calculation/fs-calculation.component';
+import { FsDocumentationComponent } from './fire-safety-services/fs-documentation/fs-documentation.component';
+import { FsRightsComponent } from './fire-safety-services/fs-rights/fs-rights.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { FireSafetyServicesComponent } from './fire-safety-services/fire-safety-
     WhoWeAreComponent,
     HowWeWorkComponent,
     ServicesListComponent,
-    FireSafetyServicesComponent
+    FireSafetyServicesComponent,
+    FsServicesListComponent,
+    FsArgumentsComponent,
+    FsCalculationComponent,
+    FsDocumentationComponent,
+    FsRightsComponent
   ],
   imports: [
     BrowserModule,

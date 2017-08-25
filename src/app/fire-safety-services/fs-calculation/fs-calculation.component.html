@@ -1,0 +1,14 @@
+<div class="row fire-safety-service">
+  <div class="col-md-5 col-sm-hidden">
+    <img [src]="service.imageUrl" alt="{{ service.name }}" class="img-responsive center-block">
+  </div>
+  <div class="col-md-7 col-sm-12">
+    <h4 class="square-marked-list">{{ service.name }}</h4>
+
+    <div *ngIf="service.worksList.length">
+      <ul>
+        <li class="square-marked-list sub-list" *ngFor="let item of service.worksList">{{item}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
