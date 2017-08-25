@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {DbService} from "../../core/db.service";
 
 @Component({
-  selector: 'app-services-list',
-  templateUrl: './services-list.component.html',
-  styleUrls: ['./services-list.component.css']
+  selector: 'app-energy-services-list',
+  templateUrl: './energy-services-list.component.html',
+  styleUrls: ['./energy-services-list.component.css']
 })
-export class ServicesListComponent implements OnInit {
+export class EnergyServicesListComponent implements OnInit {
   public servicesList: any[] = [];
-  constructor(private router: Router, private dbService: DbService) { }
+  constructor(private router: Router, private dbService: DbService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.servicesList = this.dbService.getServices();
+    this.servicesList = this.dbService.getEnergyServices();
   }
-  onNavigate() {
-    this.router.navigate(['/services'])
+  onNavigate(service: any) {
+    this.router.navigate([service.url], {relativeTo: this.route});
   }
 }

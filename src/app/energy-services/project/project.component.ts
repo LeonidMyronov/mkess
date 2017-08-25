@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DbService} from "../../core/db.service";
 
 @Component({
   selector: 'app-project',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
-  constructor() { }
+  public service: any;
+  constructor(private db: DbService) { }
 
   ngOnInit() {
+    this.service = this.db.getEnergyServiceByName('Проектирование');
   }
 
 }

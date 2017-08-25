@@ -13,10 +13,8 @@
 
       </div>
       <div class="nav-wrapper">
-        <ul class="nav-group">
-          <li class="nav-element"><a routerLink="/home/tab1">1</a></li>
-          <li class="nav-element"><a>2</a></li>
-          <li class="nav-element"><a>3</a></li>
+        <ul class="nav-group home-mnu">
+          <li *ngFor="let menuItem of menu" class="nav-element" routerLinkActive="active"><a routerLink="/home/{{ menuItem.url }}">{{ menuItem.name }}</a></li>
         </ul>
       </div>
     </div>

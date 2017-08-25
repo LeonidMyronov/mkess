@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DbService} from "../../core/db.service";
 
 @Component({
   selector: 'app-consult',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consult.component.css']
 })
 export class ConsultComponent implements OnInit {
-
-  constructor() { }
+  public service: any;
+  constructor(private db: DbService) { }
 
   ngOnInit() {
+    this.service = this.db.getEnergyServiceByName('Консалтинговые услуги');
   }
 
 }

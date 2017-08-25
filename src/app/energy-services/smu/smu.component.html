@@ -1,3 +1,25 @@
-<p>
-  smu works!
-</p>
+<div class="row energy-service">
+  <div class="col-md-5 col-sm-hidden">
+    <img [src]="service.image_url" alt="{{ service.name }}" class="img-responsive center-block">
+  </div>
+  <div class="col-md-7 col-sm-12">
+    <h4 class="square-marked-list">{{ service.name }}</h4>
+
+    <div *ngIf="service.detailedDescriptions.length">
+      <p *ngFor="let descr of service.detailedDescriptions">{{ descr }}</p>
+    </div>
+
+    <div *ngIf="service.titledWorksList.length">
+      <ul *ngFor="let work of service.titledWorksList; let i = index">
+        <h5>{{ work.title }}</h5>
+        <li class="square-marked-list sub-list" *ngFor="let item of work.worksList">{{item}}</li>
+      </ul>
+    </div>
+
+    <div *ngIf="service.worksList.length">
+      <ul>
+        <li class="square-marked-list sub-list" *ngFor="let item of service.worksList">{{item}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

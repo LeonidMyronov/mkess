@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DbService} from "../../core/db.service";
 
 @Component({
   selector: 'app-pnr',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pnr.component.css']
 })
 export class PnrComponent implements OnInit {
-
-  constructor() { }
+  public service: any;
+  constructor(private db: DbService) { }
 
   ngOnInit() {
+    this.service = this.db.getEnergyServiceByName('Пусконаладочные работы');
   }
 
 }

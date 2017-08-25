@@ -1,0 +1,15 @@
+<div class="directions-list">
+  <div class="left-side">
+      <h3>Энергетика</h3>
+
+      <ul>
+        <li *ngFor="let service of energyServices"><a  routerLink="/energetics/{{ service.url }}">{{ service.name }}</a></li>
+      </ul>
+  </div>
+  <div class="right-side">
+      <ul>
+        <li *ngFor="let service of fireServices"><a  routerLink="/fire-safety/{{ service.url }}">{{ service.name }}</a></li>
+      </ul>
+    <h3>Пожарная безопасность</h3>
+  </div>
+</div>
