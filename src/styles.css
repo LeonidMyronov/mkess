@@ -484,7 +484,7 @@ span.glyphicon {
     color: #000;
 }
 
-.directions-list:before, .directions-list:after {
+.directions-list:before, .directions-list:after, .directions-list__separator {
     content: '';
     position: absolute;
     width: 20%;
@@ -494,14 +494,21 @@ span.glyphicon {
     z-index: -1;
 }
 
+.directions-list__separator {
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(#ff0000 35%, #40c1c1 70%);
+}
+
 .directions-list:before {
     right: 50%;
     border-bottom: 2px solid #40c1c1;
 }
+
 .directions-list:after {
     left: 50%;
-    border-top: 2px solid #40c1c1;
-    border-left: 2px solid #40c1c1;
+    border-top: 2px solid #f00;
+    /*border-left: 2px solid #40c1c1;*/
 }
 
 .directions-list .left-side {
