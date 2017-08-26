@@ -1016,6 +1016,10 @@ span.glyphicon {
     .services .list-element, .fs-list-group .fs-list-element {
         width: 98%;
     }
+    .footer-content li {
+        font-size: 12px;
+        margin-right: 10px;
+    }
 }
 
 @media only screen and (max-width : 320px) {
