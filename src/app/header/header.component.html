@@ -5,11 +5,13 @@
         <img src="assets/images/logo.jpg" alt="">
       </a>
     </div>
-    <ul class="nav-group">
+    
+    <ul class="nav-group" (click)="onCloseMobileMenu()">
       <li class="nav-element" routerLinkActive="active"><a routerLink="energetics">Энергетика</a></li>
       <li class="nav-element" routerLinkActive="active"><a routerLink="fire-safety">Пожарная безопасность</a></li>
       <li class="nav-element" routerLinkActive="active"><a routerLink="license">Лицензии</a></li>
       <li class="nav-element" routerLinkActive="active"><a routerLink="contacts">Контакты</a></li>
     </ul>
+    <div class="menu-icon" (click)="onToggleMobileMenu()"><span></span><span></span><span></span></div>
   </nav>
 </header>

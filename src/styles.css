@@ -22,8 +22,8 @@ body {
 
 .dark-wrapper .dark-content {
     color: #fff;
-    font-size: 22px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 26px;
     align-self: center;
     width: 60%;
     text-align: center;
@@ -80,6 +80,21 @@ ul, h1, h2 {
     transform: scale(1.1);
 }
 
+.menu-icon {
+    display: none;
+    float: right;
+    width: 40px;
+    height: 30px;
+    justify-content: space-around;
+    margin-top: 15px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-icon span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+}
 .nav-group {
     float: right;
 }
@@ -310,7 +325,7 @@ section.services .content {
 }
 
 .services .content__header {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 0;
     text-shadow: none;
 }
@@ -523,17 +538,15 @@ span.glyphicon {
 }
 
 .directions-list {
-    /*height: 400px;*/
     margin-right: -140px;
     margin-left: -140px;
-    /*background-image: linear-gradient(110deg, #dff7ff 50%, #ff9b9b 50%);*/
     position: relative;
     display: flex;
     font-size: 20px;
 }
 .directions-list h3 {
     font-size: 38px;
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 1px 1px 0 #000;
     margin: 0;
 }
 
@@ -547,25 +560,24 @@ span.glyphicon {
     width: 20%;
     height: 100%;
     top: 0;
-    transform: skewX(-15deg);
+    transform: skewX(15deg);
     z-index: -1;
 }
 
 .directions-list__separator {
     left: 50%;
     width: 2px;
-    background: linear-gradient(#ff0000 35%, #40c1c1 70%);
+    background: linear-gradient(to top, #ff0000 35%, #40c1c1 70%);
 }
 
 .directions-list:before {
     right: 50%;
-    border-bottom: 2px solid #40c1c1;
+    border-top: 2px solid #40c1c1;
 }
 
 .directions-list:after {
     left: 50%;
-    border-top: 2px solid #f00;
-    /*border-left: 2px solid #40c1c1;*/
+    border-bottom: 2px solid #f00;
 }
 
 .directions-list .left-side {
@@ -675,11 +687,6 @@ span.glyphicon {
     transform: rotate(45deg);
 }
 
-.energy-service, .fire-safety-service {
-
-}
-
-
 .energy-service h4, .fire-safety-service h4 {
     font-size: 24px;
     text-align: left;
@@ -722,4 +729,295 @@ span.glyphicon {
 
 .docRef {
     font-style: italic;
+}
+
+@media only screen and (max-width : 1300px) {
+    .home-mnu li a, .home-mnu li.active a {
+        width: 250px;
+    }
+
+}
+
+@media only screen and (max-width : 1200px) {
+    .header .wrapper, .footer .wrapper {
+        padding: 0 60px;
+    }
+    .intro .nav-group {
+        margin: 0 60px;
+    }
+    section.services {
+        margin: 50px 30px;
+    }
+    .dark-wrapper .dark-content {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .services .content__header {
+        font-size: 24px;
+    }
+    .fs-list-element .content__header {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .directions-list {
+        margin-right: -30px;
+        margin-left: -30px;
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+    .header, .footer {
+        font-size: 16px;
+    }
+    .nav-element a, .nav-element a:active, .nav-element a:focus {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .intro {
+        height: 350px;
+    }
+    .content-wrapper .content {
+        top: 47%;
+    }
+    .content__header {
+        font-size: 40px;
+    }
+    .content__description {
+        font-size: 20px;
+    }
+    .home-mnu {
+        font-size: 20px;
+    }
+    .home-mnu li a, .home-mnu li.active a {
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .directions-list{
+        font-size: 16px;
+    }
+    .directions-list h3 {
+        font-size: 28px;
+    }
+    .directions-list .left-side {
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+    .directions-list .right-side {
+        margin-left: 40px;
+        margin-right: 10px;
+    }
+
+    .directions-list:before, .directions-list:after {
+        transform: skewX(7deg);
+        width: 30%;
+    }
+    .directions-list__separator {
+        transform: skewX(7deg);
+    }
+    .directions-list .left-side li:after, .directions-list .right-side li:after {
+        width: 28px;
+        height: 28px;
+        top: 1px;
+    }
+    .directions-list .left-side li:before, .directions-list .right-side li:before {
+        width: 12px;
+        height: 12px;
+        top: 9px;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .header .wrapper, .footer .wrapper {
+        padding: 0 20px;
+    }
+    .intro .nav-group {
+        margin: 0 0;
+    }
+    .fs-list-element .content__header {
+        font-size: 16px;
+    }
+    .col-sm-hidden {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .header, .footer {
+        height: 60px;
+        line-height: 60px;
+    }
+    .logo {
+        height: 60px;
+    }
+    .home-mnu {
+        font-size: 16px;
+    }
+    .home-mnu li a, .home-mnu li.active a {
+        width: 160px;
+    }
+
+
+    .directions-list:before, .directions-list:after,.directions-list__separator {
+        transform: skewX(3deg);
+    }
+    .directions-list .right-side li {
+        padding-left: 40px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .directions-list .left-side li {
+        padding-right: 40px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+
+    .home-menuItem {
+        padding: 0;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .home-menuItem p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .footer-content li {
+        font-size: 14px;
+        margin-right: 15px;
+    }
+
+}
+
+@media only screen and (max-width : 700px) {
+    .nav-group {
+        display: none;
+    }
+    .menu-icon {
+        display: flex;
+    }
+    .nav-group.opened {
+        display: block;
+        position: absolute;
+        top: 65px;
+        right: 5px;
+        background-color: #092c2f;
+    }
+    .nav-group.opened li {
+        text-align: center;
+        display: block;
+    }
+    .dark-wrapper .dark-content {
+        font-size: 14px;
+        line-height: 18px;
+        width: 80%;
+    }
+    .services .content__header {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .fs-list-element .content__header {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .services .list-element, .fs-list-group .fs-list-element {
+        height: 300px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .services h2 {
+        margin: 30px;
+        padding: 15px 20px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .home-mnu {
+        font-size: 14px;
+    }
+    .home-mnu li a, .home-mnu li.active a {
+        width: 120px;
+        height: 44px;
+        line-height: 44px;
+    }
+
+    .content__header {
+        font-size: 28px;
+    }
+    .content__description {
+        font-size: 16px;
+    }
+    .directions-list{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .directions-list h3 {
+        font-size: 20px;
+    }
+    .directions-list .left-side li:after, .directions-list .right-side li:after {
+        width: 22px;
+        height: 22px;
+        top: -2px;
+    }
+    .directions-list .left-side li:before, .directions-list .right-side li:before {
+        width: 10px;
+        height: 10px;
+        top: 4px;
+    }
+    .directions-list .left-side li:before {
+        right: 6px;
+    }
+    .directions-list .right-side li:before {
+        left: 6px;
+    }
+    .directions-list .left-side {
+        margin-left: 10px;
+        margin-right: 25px;
+        width: 45%;
+    }
+    .directions-list .right-side {
+        margin-left: 25px;
+        margin-right: 10px;
+        width: 55%;
+    }
+    .directions-list .left-side li {
+        line-height: 16px;
+        padding-right: 28px;
+    }
+    .directions-list .right-side li{
+        line-height: 16px;
+        padding-left: 28px;
+    }
+    .directions-list:after,.directions-list__separator {
+        left: 45%;
+    }
+    .directions-list:before {
+        right: 55%;
+    }
+
+}
+
+@media only screen and (max-width : 500px) {
+    .directions-list .left-side {
+        margin-left: 5px;
+        margin-right: 15px;
+    }
+    .directions-list .right-side {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+    .directions-list:before, .directions-list:after {
+        transform: skewX(0deg);
+    }
+    .directions-list__separator {
+        transform: skewX(0deg);
+    }
+    .services .list-element, .fs-list-group .fs-list-element {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+
 }
