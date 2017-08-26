@@ -4,8 +4,10 @@
       <div class="license-item__title license-content">
         {{ license.name }}
       </div>
-      <div class="license-item__image-wrapper">
-        <img [src]="license.url" alt="{{ license.name }}">
+      <div class="license-item__image-wrapper" (click)="onZoom(imageWrapper)" #imageWrapper>
+        <div class="image-border">
+          <img [src]="license.url" alt="{{ license.name }}">
+        </div>
       </div>
       <div class="license-item__description license-content">
         {{ license.description }}

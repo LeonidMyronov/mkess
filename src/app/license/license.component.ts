@@ -8,10 +8,17 @@ import {DbService} from "../core/db.service";
 })
 export class LicenseComponent implements OnInit {
   public licenses;
+  private innerHeight;
+  private  innerWidth;
   constructor(private dbService: DbService) { }
 
   ngOnInit() {
     this.licenses = this.dbService.getLicenses();
   }
 
+  onZoom(el: any) {
+    el.classList.toggle('zoomed');
+    let isHidden = document.querySelector('html');
+    isHidden.style.overflow = isHidden.style.overflow == '' ? 'hidden' : '';
+  }
 }
