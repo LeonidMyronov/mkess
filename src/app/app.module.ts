@@ -25,6 +25,7 @@ import { FsArgumentsComponent } from './fire-safety-services/fs-arguments/fs-arg
 import { FsCalculationComponent } from './fire-safety-services/fs-calculation/fs-calculation.component';
 import { FsDocumentationComponent } from './fire-safety-services/fs-documentation/fs-documentation.component';
 import { FsRightsComponent } from './fire-safety-services/fs-rights/fs-rights.component';
+import { DropDownDirective } from './directives/drop-down.directive';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FsRightsComponent } from './fire-safety-services/fs-rights/fs-rights.co
     FsArgumentsComponent,
     FsCalculationComponent,
     FsDocumentationComponent,
-    FsRightsComponent
+    FsRightsComponent,
+    DropDownDirective
   ],
   imports: [
     BrowserModule,

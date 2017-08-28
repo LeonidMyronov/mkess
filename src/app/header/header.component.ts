@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {Component, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +7,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute) { }
-
-  ngOnInit() {
+  ngOnInit () {
 
   }
 

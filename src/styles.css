@@ -221,8 +221,24 @@ ul, h1, h2 {
 
 }
 
-
-.footer-content {
+.section-content {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.section-content:after {
+    content: '';
+    left: 50%;
+    bottom: 0;
+    width: 20%;
+    height: 2px;
+    background: #40c1c1;
+    transform: translateX(-50%);
+    position: absolute;
 }
 
 .footer-content li {
@@ -755,9 +771,12 @@ span.glyphicon {
     .services .content__header {
         font-size: 24px;
     }
-    .fs-list-element .content__header {
+    .fs-list-element .content__header{
         font-size: 18px;
         letter-spacing: 1px;
+    }
+    .section-content {
+        font-size: 18px;
     }
     .directions-list {
         margin-right: -30px;
@@ -840,6 +859,10 @@ span.glyphicon {
     .col-sm-hidden {
         display: none;
     }
+    .section-content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 @media only screen and (max-width : 800px) {
@@ -855,6 +878,13 @@ span.glyphicon {
     }
     .home-mnu li a, .home-mnu li.active a {
         width: 160px;
+    }
+
+    .section-content {
+        font-size: 16px;
+        margin-bottom: 60px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
 
@@ -948,6 +978,10 @@ span.glyphicon {
     .content__description {
         font-size: 16px;
     }
+
+    .section-content {
+        font-size: 15px;
+    }
     .directions-list{
         font-size: 14px;
         line-height: 14px;
@@ -1019,6 +1053,10 @@ span.glyphicon {
     .footer-content li {
         font-size: 12px;
         margin-right: 10px;
+    }
+    .section-content {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
