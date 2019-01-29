@@ -22,8 +22,10 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.1",
+    "web-animations-js": "^2.3.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -34,6 +36,8 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
+    "heimdalljs": "^0.2.6",
+    "heimdalljs-logger": "^0.1.10",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
